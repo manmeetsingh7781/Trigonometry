@@ -16,13 +16,15 @@ void setup(){
   ylineX1 = originX; ylineY1 = 0; ylineX2 = originX; ylineY2 = originX*2;
   xlineX1 = 0; xlineY1 = originY; xlineX2 = originX*2; xlineY2 = originY;
   
-  fullScreen();
+ size(900,900);
   
 }
 
 
 void draw(){
 drawGraph();  
-
-
+int xVal = originX - (mouseX);
+int yVal = originY - (mouseY);
+showText("X = "+xVal, 10, 20, 255);
+showText("Y = "+yVal, 10, 40, 255);
 }

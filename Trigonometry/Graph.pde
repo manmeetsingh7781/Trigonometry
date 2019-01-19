@@ -1,4 +1,4 @@
-
+float x1 = 1, y1 = -5, x2 = 5,  y2, x3, y3;
 void drawGraph(){
 
   background(255);
@@ -7,8 +7,9 @@ void drawGraph(){
   // Unit Circle
   drawCircle(originX, originY, 60);
     
-  // triangle
-  drawTriangle();
+  fill(0, 255, 0);  
+  ellipse(originX + (x1*30), originY - (y1*30), 10, 10);
+  
   
   
   // show numbers
@@ -46,16 +47,18 @@ void drawNumbering(){
      
      rect( originX-10, originY - w * 30, 20, 2);
      
+     if(w > 1){
      // DOWN
-     showText(" "+w,  originX, originY + w * 30, 220);
+     showText(" -"+w,  originX, originY + w * 30, 220);
      rect( originX-10, originY + w * 30, 20, 2);
      
      // RIGHT
      showText(" "+w,  originX + w * 30.2 , originY , 220);
      rect( originX + w * 30, originY-10, 2, 20);
      // LEFT
-     showText(" "+w,  originX - w * 30 , originY , 220);
+     showText(" -"+w,  originX - w * 30 , originY , 220);
      rect(  originX - w * 30, originY-10, 2, 20);
+     }
 }  
   
   
